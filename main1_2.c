@@ -3,5 +3,5 @@
 
 int main () {
     hello();
-    return 1;
+    return 0;
 }
