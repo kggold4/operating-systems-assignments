@@ -25,8 +25,10 @@ int child(void *params) { print("child thread"); }
 
 int main() {
 
-    int result = clone(child, child_stack + STACK_SIZE, DEFAULT, DEFAULT);
-    printf("clone results = %d\n", result);
+    int result1 = clone(child, child_stack + STACK_SIZE, CLONE_PARENT, DEFAULT);
+    printf("clone results1 = %d\n", result1);
+    int result2 = clone(child, child_stack + STACK_SIZE, CLONE_PARENT, DEFAULT);
+    printf("clone results2 = %d\n", result2);
     print("parent");
 
     return DEFAULT;
