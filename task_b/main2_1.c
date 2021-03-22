@@ -1,12 +1,20 @@
+// includes
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+// defines
+#define CYCLES 20
+#define SLEEP 1000000
+#define DEFAULT 0
+
 // print function that the procces print
 void print(const char *text) {
-    for(int i = 0; i < 20; i++) {
-        printf("Hello from %s\n", text);
-        usleep(1000000);
+    int i = DEFAULT;
+    while(i < CYCLES) {
+        printf("hello from %s\n", text);
+        usleep(SLEEP);
+        i++;
     }
 }
 
@@ -16,11 +24,11 @@ int main() {
     // create child
     __pid_t pid = fork();
     
-    if(pid == 0) {
+    if(pid == DEFAULT) {
 
         // create a grand child
         __pid_t pid = fork();
-        if(pid == 0) {
+        if(pid == DEFAULT) {
 
             // grand child/process 2 print
             print("process 2");
@@ -29,21 +37,6 @@ int main() {
             // child/process 1 print
             print("process 1");
         }
-
-    } else {
-
-        // create another child
-        __pid_t pid = fork();
-        if(pid == 0) {
-
-            // child 2 - process 1** print
-            print("process 1**");
-        } else {
-
-            // parent/app print
-            print("app");
-        }
     }
-
-    return 0;
+    return DEFAULT;
 }
