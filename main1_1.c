@@ -2,8 +2,6 @@
 #include "hello_ariel.h"
 
 int main () {
-
     hello();
-
-    return 1 ;
+    return 0;
 }
