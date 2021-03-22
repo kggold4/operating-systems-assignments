@@ -30,7 +30,7 @@ int main() {
         // move child to another session
         setsid();
 
-        printf("starting daemon\n");
+        printf("starting my daemon\n");
 
         // close IO channels
         close(stdout);
@@ -38,7 +38,7 @@ int main() {
         close(stderr);
 
         // open log
-        openlog("daemon", LOG_PID, LOG_DAEMON);
+        openlog("myDaemon", LOG_PID, LOG_DAEMON);
         syslog(LOG_NOTICE, "daemon started");
         usleep(SLEEP);
         syslog(LOG_NOTICE, "daemon work...");
