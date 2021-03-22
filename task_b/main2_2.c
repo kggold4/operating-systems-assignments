@@ -1,8 +1,12 @@
 #define _GNU_SOURCE
+
+// includes
 #include <sched.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+// defines
 #define SLEEP 1000000
 #define STACK_SIZE 10000
 #define CYCLES 1000
@@ -23,6 +27,7 @@ void print(const char *text) {
 // runable function
 int child(void *params) { print("child thread"); }
 
+// main
 int main() {
 
     int result1 = clone(child, child_stack + STACK_SIZE, CLONE_PARENT, DEFAULT);
