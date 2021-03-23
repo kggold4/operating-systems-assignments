@@ -1,0 +1,3 @@
+Mar 23 18:29:38 kfir-VirtualBox myDaemon[16974]: daemon started
+Mar 23 18:29:41 kfir-VirtualBox myDaemon[16974]: daemon work...
+Mar 23 18:29:44 kfir-VirtualBox myDaemon[16974]: daemon finished
