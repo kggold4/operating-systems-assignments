@@ -1,3 +1,5 @@
+#define _GNU_SOURCE
+
 // includes
 #include <stdio.h>
 #include <stdlib.h>
@@ -5,20 +7,29 @@
 
 // defines
 #define SLEEP 20
+#define DEFAULT 0
 
-// main function
 int main() {
 
-    system("make\n");
+    __pid_t pid1 = fork();
+    if(!pid1) {
+        execvp("./main2_1", NULL);
+    }
 
-    // run main2_1, main2_2 and main2_3 files
-    system("./main2_1\n");
-    system("./main2_2\n");
-    system("./main2_3\n");
+    __pid_t pid2 = fork();
+    if(!pid2) {
+        execvp("./main2_2", NULL);
+    }
+
+    __pid_t pid3 = fork();
+    if(!pid3) {
+        execvp("./main2_3", NULL);
+    }
+
     sleep(SLEEP);
 
     // grep daemon from main2_3
     system("pstree | grep myDaemon /var/log/syslog");
 
-    return 0;
+    return DEFAULT;
 }
