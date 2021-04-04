@@ -9,6 +9,8 @@
 // main function
 int main() {
 
+    system("make\n");
+
     // run main2_1, main2_2 and main2_3 files
     system("./main2_1\n");
     system("./main2_2\n");

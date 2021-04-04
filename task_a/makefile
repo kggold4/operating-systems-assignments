@@ -37,8 +37,8 @@ subtask_1:main1_1.o hello_ariel.o
 
 # subtask 2
 subtask_2:main1_2.o hello_ariel.so
-	$(CC) $(FLAGS) -o main1_2 main1_2.o hello_ariel.so
 	export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+	$(CC) $(FLAGS) -o main1_2 main1_2.o hello_ariel.so
 	
 # subtask 3
 subtask_3:main1_3.o hello_ariel.so
