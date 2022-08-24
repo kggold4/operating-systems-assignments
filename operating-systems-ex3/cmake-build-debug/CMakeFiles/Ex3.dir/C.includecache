@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kfir/shared/Operating Systems/Ex3/solution.c
+stdio.h
+-
+math.h
+-
+unistd.h
+-
+stdlib.h
+-
+pthread.h
+-
+

@@ -1,11 +1,10 @@
-# Operating Systems Assignment number 1, Ariel University Year 2 semester b
+## Operating Systems Course Assignments
 
-### <i> By Kfir Goldfarb and Yehonadav Yadai </i>
-* https://github.com/kggold4
-* https://github.com/YehonadavYadai
+[Course repository](https://github.com/kggold4/computer-science-B.Sc-materials/tree/main/year%202/Operating%20Systems)
 
-<object data="https://github.com/kggold4/operating-systems-ex1/blob/main/Task1_2021.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/kggold4/operating-systems-ex1/blob/main/Task1_2021.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/kggold4/operating-systems-ex1/blob/main/Task1_2021.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+### Assignments:
+
+1. [Assignemt 1](operating-systems-ex1)
+2. [Assignemt 2](operating-systems-ex2)
+3. [Assignemt 3](operating-systems-ex3)
+4. [Assignemt 4](operating-systems-ex4)

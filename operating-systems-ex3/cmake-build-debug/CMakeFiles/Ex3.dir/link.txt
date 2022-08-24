@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Ex3.dir/solution.c.o -o Ex3 
